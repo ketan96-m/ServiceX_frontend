@@ -202,7 +202,11 @@
 <section id="simple-func-adl-example">
 <h2>Simple Func_ADL Example<a class="headerlink" href="#simple-func-adl-example" title="Permalink to this heading">#</a></h2>
 <p>This simple example reads a single root file form the CERN Opendata repo</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sx</span> <span class="o">=</span> <span class="n">ServiceXClient</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">servicex_client.dataset_identifier</span> <span class="kn">import</span> <span class="n">FileListDataset</span>
+<span class="kn">from</span> <span class="nn">servicex_client.models</span> <span class="kn">import</span> <span class="n">ResultFormat</span>
+<span class="kn">from</span> <span class="nn">servicex_client.servicex_client</span> <span class="kn">import</span> <span class="n">ServiceXClient</span>
+
+<span class="n">sx</span> <span class="o">=</span> <span class="n">ServiceXClient</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">)</span>
 <span class="n">dataset_id</span> <span class="o">=</span> <span class="n">FileListDataset</span><span class="p">(</span><span class="s2">&quot;root://eospublic.cern.ch//eos/opendata/atlas/OutreachDatasets/2020-01-22/4lep/MC/mc_345060.ggH125_ZZ4lep.4lep.root&quot;</span><span class="p">)</span>  <span class="c1"># NOQA 501</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">sx</span><span class="o">.</span><span class="n">func_adl_dataset</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">,</span> <span class="n">codegen</span><span class="o">=</span><span class="s2">&quot;uproot&quot;</span><span class="p">,</span>
@@ -220,14 +224,19 @@
 <h2>Func_ADL Example With Rucio Dataset<a class="headerlink" href="#func-adl-example-with-rucio-dataset" title="Permalink to this heading">#</a></h2>
 <p>This example uses the Rucio Dataset Identifier and returns a list of downloaded
 parquet files</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sx</span> <span class="o">=</span> <span class="n">ServiceXClient</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;testing4&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sx</span><span class="o">.</span><span class="n">get_code_generators</span><span class="p">())</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">servicex_client.dataset_identifier</span> <span class="kn">import</span> <span class="n">RucioDatasetIdentifier</span>
+<span class="kn">from</span> <span class="nn">servicex_client.models</span> <span class="kn">import</span> <span class="n">ResultFormat</span>
+<span class="kn">from</span> <span class="nn">servicex_client.servicex_client</span> <span class="kn">import</span> <span class="n">ServiceXClient</span>
+
+<span class="n">sx</span> <span class="o">=</span> <span class="n">ServiceXClient</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;testing4&quot;</span><span class="p">)</span>
 
 <span class="n">dataset_id</span> <span class="o">=</span> <span class="n">RucioDatasetIdentifier</span><span class="p">(</span><span class="s2">&quot;user.kchoi:user.kchoi.fcnc_tHq_ML.ttH.v8&quot;</span><span class="p">)</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">sx</span><span class="o">.</span><span class="n">func_adl_dataset</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">)</span>
 
-<span class="n">sx2</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Select</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;el_pt&#39;</span><span class="p">:</span> <span class="n">e</span><span class="p">[</span><span class="s1">&#39;el_pt&#39;</span><span class="p">]})</span><span class="o">.</span><span class="n">as_parquet_files</span><span class="p">()</span>
+<span class="n">sx2</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">Select</span><span class="p">(</span><span class="k">lambda</span> <span class="n">e</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;el_pt&#39;</span><span class="p">:</span> <span class="n">e</span><span class="p">[</span><span class="s1">&#39;el_pt&#39;</span><span class="p">]})</span>\
+    <span class="o">.</span><span class="n">set_result_format</span><span class="p">(</span><span class="n">ResultFormat</span><span class="o">.</span><span class="n">parquet</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">as_files</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">sx2</span><span class="p">)</span>
 </pre></div>
@@ -238,7 +247,10 @@ parquet files</p>
 <p>This example is using the python code generator. For this we don’t use func_adl,
 but pass in a python function that assumes a filename comes in as an argument and
 returns an awkward array</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sx</span> <span class="o">=</span> <span class="n">ServiceXClient</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;localhost&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">servicex_client.dataset_identifier</span> <span class="kn">import</span> <span class="n">FileListDataset</span>
+<span class="kn">from</span> <span class="nn">servicex_client.servicex_client</span> <span class="kn">import</span> <span class="n">ServiceXClient</span>
+
+<span class="n">sx</span> <span class="o">=</span> <span class="n">ServiceXClient</span><span class="p">(</span><span class="n">backend</span><span class="o">=</span><span class="s2">&quot;testing4&quot;</span><span class="p">)</span>
 <span class="n">dataset_id</span> <span class="o">=</span> <span class="n">FileListDataset</span><span class="p">(</span><span class="s2">&quot;root://eospublic.cern.ch//eos/opendata/atlas/OutreachDatasets/2020-01-22/4lep/MC/mc_345060.ggH125_ZZ4lep.4lep.root&quot;</span><span class="p">)</span>  <span class="c1"># NOQA 501</span>
 
 <span class="n">ds</span> <span class="o">=</span> <span class="n">sx</span><span class="o">.</span><span class="n">python_dataset</span><span class="p">(</span><span class="n">dataset_id</span><span class="p">,</span> <span class="n">codegen</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Python&quot;</span><span class="p">)</span>
@@ -250,7 +262,7 @@ returns an awkward array</p>
     <span class="k">return</span> <span class="n">o</span><span class="o">.</span><span class="n">lep_pt</span>
 
 
-<span class="n">sx3</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">with_uproot_function</span><span class="p">(</span><span class="n">run_query</span><span class="p">)</span><span class="o">.</span><span class="n">as_pandas</span><span class="p">())</span>
+<span class="n">sx3</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">with_uproot_function</span><span class="p">(</span><span class="n">run_query</span><span class="p">)</span><span class="o">.</span><span class="n">as_pandas</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sx3</span><span class="p">)</span>
 </pre></div>
 </div>

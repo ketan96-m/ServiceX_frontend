@@ -223,7 +223,14 @@ for new files?</p></li>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="servicex_client.dataset.Dataset.as_files">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a></span></span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_files" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">as_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a></span></span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_files" title="Permalink to this definition">#</a></dt>
+<dd><p>Submit the transform and request all the resulting files to be downloaded
+:return: TransformResult instance with the list of complete paths to the downloaded files</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.as_files_async">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_files_async</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a></span></span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_files_async"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_files_async" title="Permalink to this definition">#</a></dt>
 <dd><p>Submit the transform and request all the resulting files to be downloaded
 :return: TransformResult instance with the list of complete paths to the downloaded files</p>
 </dd></dl>
@@ -347,6 +354,7 @@ or the list of pre-signed urls</p>
 <li><a class="reference internal" href="#">Dataset Class</a><ul>
 <li><a class="reference internal" href="#servicex_client.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a><ul>
 <li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_files"><code class="docutils literal notranslate"><span class="pre">Dataset.as_files()</span></code></a></li>
+<li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_files_async"><code class="docutils literal notranslate"><span class="pre">Dataset.as_files_async()</span></code></a></li>
 <li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_pandas"><code class="docutils literal notranslate"><span class="pre">Dataset.as_pandas()</span></code></a></li>
 <li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_pandas_async"><code class="docutils literal notranslate"><span class="pre">Dataset.as_pandas_async()</span></code></a></li>
 <li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_signed_urls"><code class="docutils literal notranslate"><span class="pre">Dataset.as_signed_urls()</span></code></a></li>
