@@ -1,0 +1,617 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.0.1 and Furo 2023.05.20 --><title>Index - ServiceX Client 3.0.0 documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=e6660623a769aa55fea372102b9bf3151b292993" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">ServiceX Client 3.0.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">ServiceX Client 3.0.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicex_client.html">ServiceXClient</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset_identifier.html">DatasetIdentifier Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset.html">Dataset Class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dataset_group.html">DatasetGroup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#W"><strong>W</strong></a></div>
+</section>
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="configuration.html#servicex_client.configuration.Configuration.api_endpoints">api_endpoints (servicex_client.configuration.Configuration attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.app_version">app_version (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="dataset.html#servicex_client.dataset.Dataset.as_files">as_files() (servicex_client.dataset.Dataset method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="dataset.html#servicex_client.dataset.Dataset.as_pandas">as_pandas() (servicex_client.dataset.Dataset method)</a>
+</li>
+        <li><a href="dataset.html#servicex_client.dataset.Dataset.as_pandas_async">as_pandas_async() (servicex_client.dataset.Dataset method)</a>
+</li>
+        <li><a href="dataset.html#servicex_client.dataset.Dataset.as_signed_urls">as_signed_urls() (servicex_client.dataset.Dataset method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="configuration.html#servicex_client.configuration.Configuration.cache_path">cache_path (servicex_client.configuration.Configuration attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.Status.canceled">canceled (servicex_client.models.Status attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformedResults.codegen">codegen (servicex_client.models.TransformedResults attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformRequest.codegen">(servicex_client.models.TransformRequest attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.Status.complete">complete (servicex_client.models.Status attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformRequest.compute_hash">compute_hash() (servicex_client.models.TransformRequest method)</a>
+</li>
+        <li><a href="configuration.html#servicex_client.configuration.Configuration">Configuration (class in servicex_client.configuration)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformedResults.data_dir">data_dir (servicex_client.models.TransformedResults attribute)</a>
+</li>
+        <li><a href="dataset.html#servicex_client.dataset.Dataset">Dataset (class in servicex_client.dataset)</a>
+</li>
+        <li><a href="dataset_group.html#servicex_client.dataset_group.DatasetGroup">DatasetGroup (class in servicex_client.dataset_group)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="configuration.html#servicex_client.configuration.Configuration.default_endpoint">default_endpoint (servicex_client.configuration.Configuration attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformRequest.did">did (servicex_client.models.TransformRequest attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.did">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="configuration.html#servicex_client.configuration.Endpoint">Endpoint (class in servicex_client.configuration)</a>
+</li>
+        <li><a href="configuration.html#servicex_client.configuration.Endpoint.endpoint">endpoint (servicex_client.configuration.Endpoint attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="configuration.html#servicex_client.configuration.Configuration.endpoint_dict">endpoint_dict() (servicex_client.configuration.Configuration method)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.ResultFile.extension">extension (servicex_client.models.ResultFile attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.Status.fatal">fatal (servicex_client.models.Status attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformedResults.file_list">file_list (servicex_client.models.TransformedResults attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformRequest.file_list">(servicex_client.models.TransformRequest attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="dataset_identifier.html#servicex_client.dataset_identifier.FileListDataset">FileListDataset (class in servicex_client.dataset_identifier)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.ResultFile.filename">filename (servicex_client.models.ResultFile attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformedResults.files">files (servicex_client.models.TransformedResults attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.files">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformStatus.files_completed">files_completed (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.files_failed">files_failed (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.files_remaining">files_remaining (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.finish_time">finish_time (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient.func_adl_dataset">func_adl_dataset() (servicex_client.servicex_client.ServiceXClient method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="dataset_group.html#servicex_client.dataset_group.DatasetGroup.gather_results">gather_results() (servicex_client.dataset_group.DatasetGroup method)</a>
+</li>
+        <li><a href="dataset_group.html#servicex_client.dataset_group.DatasetGroup.gather_results_async">gather_results_async() (servicex_client.dataset_group.DatasetGroup method)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.generated_code_cm">generated_code_cm (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient.get_code_generators">get_code_generators() (servicex_client.servicex_client.ServiceXClient method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient.get_transform_status">get_transform_status() (servicex_client.servicex_client.ServiceXClient method)</a>
+</li>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient.get_transform_status_async">get_transform_status_async() (servicex_client.servicex_client.ServiceXClient method)</a>
+</li>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient.get_transforms">get_transforms() (servicex_client.servicex_client.ServiceXClient method)</a>
+</li>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient.get_transforms_async">get_transforms_async() (servicex_client.servicex_client.ServiceXClient method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformedResults.hash">hash (servicex_client.models.TransformedResults attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="I" class="genindex-section">
+  <h2>I</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformRequest.image">image (servicex_client.models.TransformRequest attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.image">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformStatus.minio_access_key">minio_access_key (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.minio_endpoint">minio_endpoint (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.minio_secret_key">minio_secret_key (servicex_client.models.TransformStatus attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformStatus.minio_secured">minio_secured (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li>
+    module
+
+        <ul>
+          <li><a href="models.html#module-servicex_client.models">servicex_client.models</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="N" class="genindex-section">
+  <h2>N</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="configuration.html#servicex_client.configuration.Endpoint.name">name (servicex_client.configuration.Endpoint attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.ResultDestination.object_store">object_store (servicex_client.models.ResultDestination attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.ResultFormat.parquet">parquet (servicex_client.models.ResultFormat attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient.python_dataset">python_dataset() (servicex_client.servicex_client.ServiceXClient method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="configuration.html#servicex_client.configuration.Configuration.read">read() (servicex_client.configuration.Configuration class method)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformedResults.request_id">request_id (servicex_client.models.TransformedResults attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.request_id">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="models.html#servicex_client.models.TransformRequest.result_destination">result_destination (servicex_client.models.TransformRequest attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.result_destination">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="models.html#servicex_client.models.TransformedResults.result_format">result_format (servicex_client.models.TransformedResults attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformRequest.result_format">(servicex_client.models.TransformRequest attribute)</a>
+</li>
+          <li><a href="models.html#servicex_client.models.TransformStatus.result_format">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.ResultDestination">ResultDestination (class in servicex_client.models)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.ResultFile">ResultFile (class in servicex_client.models)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.ResultFormat">ResultFormat (class in servicex_client.models)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.ResultFormat.root_file">root_file (servicex_client.models.ResultFormat attribute)</a>
+</li>
+        <li><a href="dataset_identifier.html#servicex_client.dataset_identifier.RucioDatasetIdentifier">RucioDatasetIdentifier (class in servicex_client.dataset_identifier)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.Status.running">running (servicex_client.models.Status attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformRequest.selection">selection (servicex_client.models.TransformRequest attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.selection">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+        <li>
+    servicex_client.models
+
+        <ul>
+          <li><a href="models.html#module-servicex_client.models">module</a>
+</li>
+        </ul></li>
+        <li><a href="servicex_client.html#servicex_client.servicex_client.ServiceXClient">ServiceXClient (class in servicex_client.servicex_client)</a>
+</li>
+        <li><a href="dataset.html#servicex_client.dataset.Dataset.set_result_format">set_result_format() (servicex_client.dataset.Dataset method)</a>
+</li>
+        <li><a href="configuration.html#servicex_client.configuration.Configuration.shortened_downloaded_filename">shortened_downloaded_filename (servicex_client.configuration.Configuration attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformedResults.signed_url_list">signed_url_list (servicex_client.models.TransformedResults attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.ResultFile.size">size (servicex_client.models.ResultFile attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.Status">Status (class in servicex_client.models)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus.status">status (servicex_client.models.TransformStatus attribute)</a>
+</li>
+        <li><a href="dataset.html#servicex_client.dataset.Dataset.submit_and_download">submit_and_download() (servicex_client.dataset.Dataset method)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformedResults.submit_time">submit_time (servicex_client.models.TransformedResults attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.submit_time">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="models.html#servicex_client.models.Status.submitted">submitted (servicex_client.models.Status attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformedResults.title">title (servicex_client.models.TransformedResults attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformRequest.title">(servicex_client.models.TransformRequest attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="configuration.html#servicex_client.configuration.Endpoint.token">token (servicex_client.configuration.Endpoint attribute)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformedResults">TransformedResults (class in servicex_client.models)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformRequest">TransformRequest (class in servicex_client.models)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformStatus">TransformStatus (class in servicex_client.models)</a>
+</li>
+        <li><a href="models.html#servicex_client.models.TransformRequest.tree_name">tree_name (servicex_client.models.TransformRequest attribute)</a>
+
+        <ul>
+          <li><a href="models.html#servicex_client.models.TransformStatus.tree_name">(servicex_client.models.TransformStatus attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.ResultDestination.volume">volume (servicex_client.models.ResultDestination attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="W" class="genindex-section">
+  <h2>W</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="models.html#servicex_client.models.TransformStatus.workflow_name">workflow_name (servicex_client.models.TransformStatus attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Ben Galewsky, Gordon Watts
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>
