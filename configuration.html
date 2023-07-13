@@ -199,80 +199,8 @@
         <article role="main">
           <section id="configuration">
 <h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="servicex_client.configuration.Configuration">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">servicex_client.configuration.</span></span><span class="sig-name descname"><span class="pre">Configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_endpoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#servicex_client.configuration.Endpoint" title="servicex_client.configuration.Endpoint"><span class="pre">Endpoint</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_endpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shortened_downloaded_filename</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/configuration.html#Configuration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.configuration.Configuration" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p>Create a new model by parsing and validating input data from keyword arguments.</p>
-<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="servicex_client.configuration.Configuration.api_endpoints">
-<span class="sig-name descname"><span class="pre">api_endpoints</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#servicex_client.configuration.Endpoint" title="servicex_client.configuration.Endpoint"><span class="pre">Endpoint</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#servicex_client.configuration.Configuration.api_endpoints" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="servicex_client.configuration.Configuration.cache_path">
-<span class="sig-name descname"><span class="pre">cache_path</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#servicex_client.configuration.Configuration.cache_path" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="servicex_client.configuration.Configuration.default_endpoint">
-<span class="sig-name descname"><span class="pre">default_endpoint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#servicex_client.configuration.Configuration.default_endpoint" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.configuration.Configuration.endpoint_dict">
-<span class="sig-name descname"><span class="pre">endpoint_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#servicex_client.configuration.Endpoint" title="servicex_client.configuration.Endpoint"><span class="pre">Endpoint</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/servicex_client/configuration.html#Configuration.endpoint_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.configuration.Configuration.endpoint_dict" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.configuration.Configuration.read">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/configuration.html#Configuration.read"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.configuration.Configuration.read" title="Permalink to this definition">#</a></dt>
-<dd><p>Read configuration from .servicex file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>config_path</strong> – If provided, use this as the path to the .servicex file.
-Otherwise, search, starting from the current working directory
-and look in enclosing directories</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Populated configuraton object</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="servicex_client.configuration.Configuration.shortened_downloaded_filename">
-<span class="sig-name descname"><span class="pre">shortened_downloaded_filename</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#servicex_client.configuration.Configuration.shortened_downloaded_filename" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 <section id="endpoint">
 <h2>Endpoint<a class="headerlink" href="#endpoint" title="Permalink to this heading">#</a></h2>
-<dl class="py class">
-<dt class="sig sig-object py" id="servicex_client.configuration.Endpoint">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">servicex_client.configuration.</span></span><span class="sig-name descname"><span class="pre">Endpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endpoint</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/configuration.html#Endpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.configuration.Endpoint" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p>Create a new model by parsing and validating input data from keyword arguments.</p>
-<p>Raises ValidationError if the input data cannot be parsed to form a valid model.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="servicex_client.configuration.Endpoint.endpoint">
-<span class="sig-name descname"><span class="pre">endpoint</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#servicex_client.configuration.Endpoint.endpoint" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="servicex_client.configuration.Endpoint.name">
-<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#servicex_client.configuration.Endpoint.name" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="servicex_client.configuration.Endpoint.token">
-<span class="sig-name descname"><span class="pre">token</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#servicex_client.configuration.Endpoint.token" title="Permalink to this definition">#</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 </section>
 </section>
 
@@ -324,24 +252,7 @@ and look in enclosing directories</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Configuration</a><ul>
-<li><a class="reference internal" href="#servicex_client.configuration.Configuration"><code class="docutils literal notranslate"><span class="pre">Configuration</span></code></a><ul>
-<li><a class="reference internal" href="#servicex_client.configuration.Configuration.api_endpoints"><code class="docutils literal notranslate"><span class="pre">Configuration.api_endpoints</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.configuration.Configuration.cache_path"><code class="docutils literal notranslate"><span class="pre">Configuration.cache_path</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.configuration.Configuration.default_endpoint"><code class="docutils literal notranslate"><span class="pre">Configuration.default_endpoint</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.configuration.Configuration.endpoint_dict"><code class="docutils literal notranslate"><span class="pre">Configuration.endpoint_dict()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.configuration.Configuration.read"><code class="docutils literal notranslate"><span class="pre">Configuration.read()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.configuration.Configuration.shortened_downloaded_filename"><code class="docutils literal notranslate"><span class="pre">Configuration.shortened_downloaded_filename</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#endpoint">Endpoint</a><ul>
-<li><a class="reference internal" href="#servicex_client.configuration.Endpoint"><code class="docutils literal notranslate"><span class="pre">Endpoint</span></code></a><ul>
-<li><a class="reference internal" href="#servicex_client.configuration.Endpoint.endpoint"><code class="docutils literal notranslate"><span class="pre">Endpoint.endpoint</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.configuration.Endpoint.name"><code class="docutils literal notranslate"><span class="pre">Endpoint.name</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.configuration.Endpoint.token"><code class="docutils literal notranslate"><span class="pre">Endpoint.token</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#endpoint">Endpoint</a></li>
 </ul>
 </li>
 </ul>

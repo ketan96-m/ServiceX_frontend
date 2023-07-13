@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -191,7 +191,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -199,36 +199,6 @@
         <article role="main">
           <section id="datasetidentifier-module">
 <h1>DatasetIdentifier Module<a class="headerlink" href="#datasetidentifier-module" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="servicex_client.dataset_identifier.RucioDatasetIdentifier">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">servicex_client.dataset_identifier.</span></span><span class="sig-name descname"><span class="pre">RucioDatasetIdentifier</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/dataset_identifier.html#RucioDatasetIdentifier"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset_identifier.RucioDatasetIdentifier" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DataSetIdentifier</span></code></p>
-<p>Rucio Dataset - this will be looked up using the Rucio data management
-service.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dataset</strong> – The rucio DID - this can be a dataset or a container of datasets.</p></li>
-<li><p><strong>num_files</strong> – Maximum number of files to return. This is useful during development
-to perform quick runs. ServiceX is careful to make sure it always
-returns the same subset of files.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="servicex_client.dataset_identifier.FileListDataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">servicex_client.dataset_identifier.</span></span><span class="sig-name descname"><span class="pre">FileListDataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">files</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/dataset_identifier.html#FileListDataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset_identifier.FileListDataset" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Dataset specified as a list of XRootD URIs.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>files</strong> – Either a list of URIs or a single URI string</p>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 
         </article>
@@ -274,28 +244,8 @@ returns the same subset of files.</p></li>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">DatasetIdentifier Module</a><ul>
-<li><a class="reference internal" href="#servicex_client.dataset_identifier.RucioDatasetIdentifier"><code class="docutils literal notranslate"><span class="pre">RucioDatasetIdentifier</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset_identifier.FileListDataset"><code class="docutils literal notranslate"><span class="pre">FileListDataset</span></code></a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

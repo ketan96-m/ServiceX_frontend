@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -191,7 +191,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -199,108 +199,6 @@
         <article role="main">
           <section id="servicexclient">
 <h1>ServiceXClient<a class="headerlink" href="#servicexclient" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">servicex_client.servicex_client.</span></span><span class="sig-name descname"><span class="pre">ServiceXClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">backend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Connection to a ServiceX deployment. Instances of this class can deployment
-data from the service and also interact with previously run transformations.
-Instances of this class are factories for <cite>Datasets`</cite></p>
-<p>If both <cite>backend</cite> and <cite>url</cite> are unspecified then it will attempt to pick up
-the default backend from <cite>.servicex</cite></p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>backend</strong> – Name of a deployment from the .servicex file</p></li>
-<li><p><strong>url</strong> – Direct URL of a serviceX deployment instead of using .servicex.
-Can only work with hosts without auth, or the token is found
-in a file pointed to by the environment variable BEARER_TOKEN_FILE</p></li>
-<li><p><strong>config_path</strong> – Optional path te the <cite>.servicex</cite> file. If not specificed,
-will search in local directory and up in enclosing directories</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient.func_adl_dataset">
-<span class="sig-name descname"><span class="pre">func_adl_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_identifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataSetIdentifier</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="dataset_identifier.html#servicex_client.dataset_identifier.FileListDataset" title="servicex_client.dataset_identifier.FileListDataset"><span class="pre">FileListDataset</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ServiceX</span> <span class="pre">Client'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">codegen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'uproot'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="models.html#servicex_client.models.ResultFormat" title="servicex_client.models.ResultFormat"><span class="pre">ResultFormat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FuncADLDataset</span></span></span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient.func_adl_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient.func_adl_dataset" title="Permalink to this definition">#</a></dt>
-<dd><p>Generate a dataset that can use func_adl query language</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dataset_identifier</strong> – The dataset identifier or filelist to be the source of files</p></li>
-<li><p><strong>title</strong> – Title to be applied to the transform. This is also useful for
-relating transform results.</p></li>
-<li><p><strong>codegen</strong> – Name of the code generator to use with this transform</p></li>
-<li><p><strong>result_format</strong> – Do you want Paqrquet or Root? This can be set later with
-the set_result_format method</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A func_adl dataset ready to accept query statements.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient.get_code_generators">
-<span class="sig-name descname"><span class="pre">get_code_generators</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient.get_code_generators"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient.get_code_generators" title="Permalink to this definition">#</a></dt>
-<dd><p>Retrieve the code generators deployed with the serviceX instance
-:return:  The list of code generators as json dictionary</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient.get_transform_status">
-<span class="sig-name descname"><span class="pre">get_transform_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformStatus" title="servicex_client.models.TransformStatus"><span class="pre">TransformStatus</span></a></span></span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient.get_transform_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient.get_transform_status" title="Permalink to this definition">#</a></dt>
-<dd><p>Get the status of a given transform
-:param transform_id: The uuid of the transform
-:return: The current status for the transform</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient.get_transform_status_async">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_transform_status_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transform_id</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformStatus" title="servicex_client.models.TransformStatus"><span class="pre">TransformStatus</span></a></span></span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient.get_transform_status_async"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient.get_transform_status_async" title="Permalink to this definition">#</a></dt>
-<dd><p>Get the status of a given transform
-:param transform_id: The uuid of the transform
-:return: The current status for the transform</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient.get_transforms">
-<span class="sig-name descname"><span class="pre">get_transforms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="models.html#servicex_client.models.TransformStatus" title="servicex_client.models.TransformStatus"><span class="pre">TransformStatus</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient.get_transforms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient.get_transforms" title="Permalink to this definition">#</a></dt>
-<dd><p>Retrieve all transforms you have run on the server
-:return: List of Transform status objects</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient.get_transforms_async">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_transforms_async</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="models.html#servicex_client.models.TransformStatus" title="servicex_client.models.TransformStatus"><span class="pre">TransformStatus</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient.get_transforms_async"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient.get_transforms_async" title="Permalink to this definition">#</a></dt>
-<dd><p>Retrieve all transforms you have run on the server
-:return: List of Transform status objects</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.servicex_client.ServiceXClient.python_dataset">
-<span class="sig-name descname"><span class="pre">python_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_identifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataSetIdentifier</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="dataset_identifier.html#servicex_client.dataset_identifier.FileListDataset" title="servicex_client.dataset_identifier.FileListDataset"><span class="pre">FileListDataset</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ServiceX</span> <span class="pre">Client'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">codegen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'uproot'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="models.html#servicex_client.models.ResultFormat" title="servicex_client.models.ResultFormat"><span class="pre">ResultFormat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">PythonDataset</span></span></span><a class="reference internal" href="_modules/servicex_client/servicex_client.html#ServiceXClient.python_dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.servicex_client.ServiceXClient.python_dataset" title="Permalink to this definition">#</a></dt>
-<dd><p>Generate a dataset that can use accept a python function for the  query</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dataset_identifier</strong> – The dataset identifier or filelist to be the source of files</p></li>
-<li><p><strong>title</strong> – Title to be applied to the transform. This is also useful for
-relating transform results.</p></li>
-<li><p><strong>codegen</strong> – Name of the code generator to use with this transform</p></li>
-<li><p><strong>result_format</strong> – Do you want Paqrquet or Root? This can be set later with
-the set_result_format method</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A func_adl dataset ready to accept a python function statements.</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
         </article>
@@ -346,36 +244,8 @@ the set_result_format method</p></li>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">ServiceXClient</a><ul>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient"><code class="docutils literal notranslate"><span class="pre">ServiceXClient</span></code></a><ul>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient.func_adl_dataset"><code class="docutils literal notranslate"><span class="pre">ServiceXClient.func_adl_dataset()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient.get_code_generators"><code class="docutils literal notranslate"><span class="pre">ServiceXClient.get_code_generators()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient.get_transform_status"><code class="docutils literal notranslate"><span class="pre">ServiceXClient.get_transform_status()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient.get_transform_status_async"><code class="docutils literal notranslate"><span class="pre">ServiceXClient.get_transform_status_async()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient.get_transforms"><code class="docutils literal notranslate"><span class="pre">ServiceXClient.get_transforms()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient.get_transforms_async"><code class="docutils literal notranslate"><span class="pre">ServiceXClient.get_transforms_async()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.servicex_client.ServiceXClient.python_dataset"><code class="docutils literal notranslate"><span class="pre">ServiceXClient.python_dataset()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

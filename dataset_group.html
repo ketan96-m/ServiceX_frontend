@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -191,7 +191,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -199,43 +199,6 @@
         <article role="main">
           <section id="datasetgroup">
 <h1>DatasetGroup<a class="headerlink" href="#datasetgroup" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="servicex_client.dataset_group.DatasetGroup">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">servicex_client.dataset_group.</span></span><span class="sig-name descname"><span class="pre">DatasetGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">datasets</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Coroutine</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/dataset_group.html#DatasetGroup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset_group.DatasetGroup" title="Permalink to this definition">#</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Simultaneously submit a group of transform requests and offer the ability to wait
-for them all to finish.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>datasets</strong> – List of transform requests form dataset instances</p>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset_group.DatasetGroup.gather_results">
-<span class="sig-name descname"><span class="pre">gather_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/servicex_client/dataset_group.html#DatasetGroup.gather_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset_group.DatasetGroup.gather_results" title="Permalink to this definition">#</a></dt>
-<dd><p>Synchronous wait for all of the transform requests in the group to complete</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List of TransformedResults instances. Use the title property to relate the
-result to your submission</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset_group.DatasetGroup.gather_results_async">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gather_results_async</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/servicex_client/dataset_group.html#DatasetGroup.gather_results_async"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset_group.DatasetGroup.gather_results_async" title="Permalink to this definition">#</a></dt>
-<dd><p>Await on all of the transform requests in the group.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List of TransformedResults instances. Use the title property to relate the
-result to your submission</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
         </article>
@@ -281,31 +244,8 @@ result to your submission</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">DatasetGroup</a><ul>
-<li><a class="reference internal" href="#servicex_client.dataset_group.DatasetGroup"><code class="docutils literal notranslate"><span class="pre">DatasetGroup</span></code></a><ul>
-<li><a class="reference internal" href="#servicex_client.dataset_group.DatasetGroup.gather_results"><code class="docutils literal notranslate"><span class="pre">DatasetGroup.gather_results()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset_group.DatasetGroup.gather_results_async"><code class="docutils literal notranslate"><span class="pre">DatasetGroup.gather_results_async()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

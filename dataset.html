@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -191,7 +191,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -199,101 +199,6 @@
         <article role="main">
           <section id="dataset-class">
 <h1>Dataset Class<a class="headerlink" href="#dataset-class" title="Permalink to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">servicex_client.dataset.</span></span><span class="sig-name descname"><span class="pre">Dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataset_identifier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataSetIdentifier</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="dataset_identifier.html#servicex_client.dataset_identifier.FileListDataset" title="servicex_client.dataset_identifier.FileListDataset"><span class="pre">FileListDataset</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'ServiceX</span> <span class="pre">Client'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">codegen</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sx_adapter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ServiceXAdapter</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="configuration.html#servicex_client.configuration.Configuration" title="servicex_client.configuration.Configuration"><span class="pre">Configuration</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">QueryCache</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">servicex_polling_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minio_polling_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="models.html#servicex_client.models.ResultFormat" title="servicex_client.models.ResultFormat"><span class="pre">ResultFormat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset" title="Permalink to this definition">#</a></dt>
-<dd><p>This is the main class for constructing transform requests and receiving the
-results in a format of your choice. It can be run synchronously or asynchronously.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>dataset_identifier</strong> – Either a Rucio DID or a list of files</p></li>
-<li><p><strong>title</strong> – Human readable title for this transform</p></li>
-<li><p><strong>codegen</strong> – Name of the code generator</p></li>
-<li><p><strong>sx_adapter</strong> – </p></li>
-<li><p><strong>config</strong> – </p></li>
-<li><p><strong>query_cache</strong> – </p></li>
-<li><p><strong>servicex_polling_interval</strong> – How many seconds between polling for
-transform status?</p></li>
-<li><p><strong>minio_polling_interval</strong> – How many seconds between polling the minio bucket
-for new files?</p></li>
-<li><p><strong>result_format</strong> – </p></li>
-</ul>
-</dd>
-</dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.as_files">
-<span class="sig-name descname"><span class="pre">as_files</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a></span></span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_files" title="Permalink to this definition">#</a></dt>
-<dd><p>Submit the transform and request all the resulting files to be downloaded
-:return: TransformResult instance with the list of complete paths to the downloaded files</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.as_files_async">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_files_async</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a></span></span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_files_async"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_files_async" title="Permalink to this definition">#</a></dt>
-<dd><p>Submit the transform and request all the resulting files to be downloaded
-:return: TransformResult instance with the list of complete paths to the downloaded files</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.as_pandas">
-<span class="sig-name descname"><span class="pre">as_pandas</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_pandas"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_pandas" title="Permalink to this definition">#</a></dt>
-<dd><p>Synchronous version of as_pandas_asynch
-:return:</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.as_pandas_async">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_pandas_async</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_pandas_async"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_pandas_async" title="Permalink to this definition">#</a></dt>
-<dd><p>Return a pandas dataframe containing the results. This only works if you’ve
-installed pandas extra</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Pandas Dataframe</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.as_signed_urls">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">as_signed_urls</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a></span></span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.as_signed_urls"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.as_signed_urls" title="Permalink to this definition">#</a></dt>
-<dd><p>Presign URLs for each of the transformed files</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>TransformedResults object with the presigned_urls list populated</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.set_result_format">
-<span class="sig-name descname"><span class="pre">set_result_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="models.html#servicex_client.models.ResultFormat" title="servicex_client.models.ResultFormat"><span class="pre">ResultFormat</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.set_result_format"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.set_result_format" title="Permalink to this definition">#</a></dt>
-<dd><p>Set the result format - required at constructor time or as part of the query
-chain of methods
-:param result_format:
-:return: self to allow you to chain together query and setup methods</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="servicex_client.dataset.Dataset.submit_and_download">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">submit_and_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signed_urls_only</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="models.html#servicex_client.models.TransformedResults" title="servicex_client.models.TransformedResults"><span class="pre">TransformedResults</span></a></span></span><a class="reference internal" href="_modules/servicex_client/dataset.html#Dataset.submit_and_download"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#servicex_client.dataset.Dataset.submit_and_download" title="Permalink to this definition">#</a></dt>
-<dd><p>Submit the transform request to ServiceX. Poll the transform status to see when
-the transform completes and to get the number of files in the dataset along with
-current progress and failed file count.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>signed_urls_only</strong> – Set to true to skip actually downloading the files and
-just return pre-signed urls</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Transform results object which contains the list of files downlaoded
-or the list of pre-signed urls</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
 </section>
 
         </article>
@@ -339,36 +244,8 @@ or the list of pre-signed urls</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            On this page
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Dataset Class</a><ul>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset"><code class="docutils literal notranslate"><span class="pre">Dataset</span></code></a><ul>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_files"><code class="docutils literal notranslate"><span class="pre">Dataset.as_files()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_files_async"><code class="docutils literal notranslate"><span class="pre">Dataset.as_files_async()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_pandas"><code class="docutils literal notranslate"><span class="pre">Dataset.as_pandas()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_pandas_async"><code class="docutils literal notranslate"><span class="pre">Dataset.as_pandas_async()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset.as_signed_urls"><code class="docutils literal notranslate"><span class="pre">Dataset.as_signed_urls()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset.set_result_format"><code class="docutils literal notranslate"><span class="pre">Dataset.set_result_format()</span></code></a></li>
-<li><a class="reference internal" href="#servicex_client.dataset.Dataset.submit_and_download"><code class="docutils literal notranslate"><span class="pre">Dataset.submit_and_download()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>
